@@ -1,13 +1,13 @@
-import template from './contact.address.jade';
-import controller from './contact.address.controller';
+var template = require('./contact.address.jade');
+var controller = require('./contact.address.controller');
 
-let contactAddressComponent = {
+var contactAddressComponent = {
   restrict: 'E',
   scope: {},
-  template,
-  controller,
+  template: template,
+  controller: controller,
   controllerAs: 'vm',
   bindToController: true
 };
 
-export default contactAddressComponent;
+module.exports = contactAddressComponent;

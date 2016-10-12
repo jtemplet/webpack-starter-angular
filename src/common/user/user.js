@@ -1,8 +1,8 @@
-import angular from 'angular';
-import UserFactory from './user.factory';
+var angular = require('angular');
+var UserFactory = require('./user.factory');
 
-let userModule = angular.module('user', [])
+var userModule = angular.module('user', [])
 
 .factory('User', UserFactory);
 
-export default userModule;
+module.exports = userModule;

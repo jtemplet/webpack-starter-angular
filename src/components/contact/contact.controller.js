@@ -1,7 +1,5 @@
-class ContactController {
-  constructor() {
+function ContactController() {
     this.name = 'Contact Us';
-  }
 }
 
-export default ContactController;
+module.exports = ContactController;

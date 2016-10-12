@@ -1,15 +1,15 @@
-import template from './navbar.html';
-import controller from './navbar.controller';
+var template = require('./navbar.html');
+var controller = require('./navbar.controller');
 
-let navbarComponent = function () {
+var navbarComponent = function () {
   return {
     restrict: 'E',
     scope: {},
-    template,
-    controller,
+    template: template,
+    controller: controller,
     controllerAs: 'vm',
     bindToController: true
   };
 };
 
-export default navbarComponent;
+module.exports = navbarComponent;

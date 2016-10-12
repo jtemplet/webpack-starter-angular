@@ -1,7 +1,5 @@
-class NewController {
-  constructor() {
-    this.name = 'New Component Syntax';
-  }
+function NewController() {
+  this.name = 'New Component Syntax';
 }
 
-export default NewController;
+module.exports = NewController;

@@ -1,10 +1,10 @@
-import template from './app.html';
+var template = require('./app.html');
 
-let appComponent = () => {
+var appComponent = function() {
   return {
-    template,
+    template: template,
     restrict: 'E'
   };
 };
 
-export default appComponent;
+module.exports = appComponent;

@@ -1,40 +1,37 @@
-class ContactFormController {
-  constructor($scope, $log) {
-    this.name = 'Contact Us';
-    this.model = {};
-    this.schema = {
-      type: 'object',
-      properties: {
-        name: { type: 'string', minLength: 2, title: 'Name', description: 'Name or alias' },
-        title: {
-          type: 'string',
-          enum: ['dr','jr','sir','mrs','mr','NaN','dj']
-        }
-      },
-      'required': [
-        'name'
-      ]
-    };
-    this.form = [
-      '*',
-      {
-        type: 'submit',
-        title: 'Save'
+function ContactFormController($scope, $log) {
+  this.name = 'Contact Us';
+  this.model = {};
+  this.schema = {
+    type: 'object',
+    properties: {
+      name: { type: 'string', minLength: 2, title: 'Name', description: 'Name or alias' },
+      title: {
+        type: 'string',
+        enum: ['dr','jr','sir','mrs','mr','NaN','dj']
       }
-    ];
-
-    this.onSubmit = function(form) {
-      // First we broadcast an event so all fields validate themselves
-      $scope.$broadcast('schemaFormValidate');
-
-      // Then we check if the form is valid
-      if (form.$valid) {
-        $log('form is valid');
-      } else {
-        $log('form is invalid');
-      }
-    };
-  }
+    },
+    'required': [
+      'name'
+    ]
+  };
+  this.form = [
+    '*',
+    {
+      type: 'submit',
+      title: 'Save'
+    }
+  ];
 }
 
-export default ContactFormController;
+ContactFormController.prototype.onSubmit = function(form) {
+  // First we broadcast an event so all fields validate themselves
+  $scope.$broadcast('schemaFormValidate');
+
+  // Then we check if the form is valid
+  if (form.$valid) {
+    $log('form is valid');
+  } else {
+    $log('form is invalid');
+  }
+};
+module.exports = ContactFormController;

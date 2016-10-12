@@ -1,10 +1,15 @@
-import angular from 'angular';
-import Navbar from './navbar/navbar';
-import Hero from './hero/hero';
-import User from './user/user';
+var angular = require('angular');
+var Navbar = require('./navbar/navbar');
+var Hero = require('./hero/hero');
+var User = require('./user/user');
 
-export default angular.module('app.common', [
+module.exports = angular.module('app.common', [
   Navbar.name,
   Hero.name,
   User.name
 ]);
+// export default angular.module('app.common', [
+//   Navbar.name,
+//   Hero.name,
+//   User.name
+// ]);

@@ -1,13 +1,13 @@
-import angular from 'angular';
-import Home from './home/home';
-import Contact from './contact/contact';
-import ContactAddress from './contact/contact.address';
-import ContactForm from './contact/contact.form';
-import Github from './github/github';
-import Forms from './forms/forms';
-import New from './new/new';
+var angular = require('angular');
+var Home = require('./home/home');
+var Contact = require('./contact/contact');
+var ContactAddress = require('./contact/contact.address');
+var ContactForm = require('./contact/contact.form');
+var Github = require('./github/github');
+var Forms = require('./forms/forms');
+var New = require('./new/new');
 
-export default angular.module('app.components', [
+module.exports = angular.module('app.components', [
   Contact.name,
   ContactAddress.name,
   ContactForm.name,

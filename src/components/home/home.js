@@ -1,12 +1,12 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import homeComponent from './home.component';
+var angular = require('angular');
+var uiRouter = require('angular-ui-router');
+var homeComponent = require('./home.component');
 
-let homeModule = angular.module('home', [
+var homeModule = angular.module('home', [
   uiRouter
 ])
 
-.config(($stateProvider, $urlRouterProvider) => {
+.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
@@ -18,4 +18,4 @@ let homeModule = angular.module('home', [
 
 .component('home', homeComponent);
 
-export default homeModule;
+module.exports = homeModule;

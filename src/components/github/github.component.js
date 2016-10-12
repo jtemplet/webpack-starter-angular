@@ -1,13 +1,13 @@
-import template from './github.html';
-import controller from './github.controller';
+var template = require('./github.html');
+var controller = require('./github.controller');
 
-let githubComponent = {
+var githubComponent = {
   restrict: 'E',
   scope: {},
-  template,
-  controller,
+  template: template,
+  controller: controller,
   controllerAs: 'vm',
   bindToController: true
 };
 
-export default githubComponent;
+module.exports = githubComponent;

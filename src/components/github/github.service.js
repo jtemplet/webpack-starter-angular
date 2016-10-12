@@ -1,10 +1,8 @@
-class GithubService {
+function GithubService($http) {
+  this.$http = $http;
+}
 
-  constructor($http) {
-    this.$http = $http;
-  }
-
-  getItems(githubUsername) {
+GithubService.prototype.getItems = function(githubUsername) {
     var githubUrl = 'https://api.github.com';
     return this.$http({
       method: 'JSONP',
@@ -20,8 +18,6 @@ class GithubService {
       // or server returns response with an error status.
       alert(status);
     });
-  }
+};
 
-}
-
-export default GithubService;
+module.exports = GithubService;

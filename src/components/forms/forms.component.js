@@ -1,7 +1,7 @@
-import template from './forms.html';
-import controller from './forms.controller';
+var template = require('./forms.html');
+var controller = require('./forms.controller');
 
-let formsComponent = {
+var formsComponent = {
   restrict: 'E',
   scope: {},
   template: template,
@@ -9,4 +9,4 @@ let formsComponent = {
   controllerAs: 'vm'
 };
 
-export default formsComponent;
+module.exports = formsComponent;

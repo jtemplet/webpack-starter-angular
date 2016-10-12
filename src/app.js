@@ -1,15 +1,12 @@
-import 'jquery';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import AppComponent from './app.component.js';
-import Common from './common/common';
-import Components from './components/components';
-import './styles.scss';
+require('jquery');
+require('bootstrap/dist/css/bootstrap.min.css');
+require('angular');
+// var angular = require('angular');
+var uiRouter = require('angular-ui-router');
+var AppComponent = require('./app.component.js');
+var Common = require('./common/common');
+var Components = require('./components/components');
+require('./styles.scss');
 
-angular.module('myApp', [
-  uiRouter,
-  Common.name,
-  Components.name
-])
-.directive('app', AppComponent);
+angular.module('myApp', [uiRouter, Common.name, Components.name])
+    .directive('app', AppComponent);

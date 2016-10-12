@@ -1,16 +1,12 @@
-class GithubController {
-
-  constructor(githubService) {
-    this.result = {};
-    this.service = githubService;
-  }
-
-  getDetails() {
-    this.service.getItems(this.githubUsername).then((res) => {
-      this.result = res.data;
-    });
-  }
-
+function GithubController(githubService) {
+  this.result = {};
+  this.service = githubService;
 }
 
-export default GithubController;
+GithubController.prototype.getDetails = function() {
+  this.service.getItems(this.githubUsername).then(function(res) {
+    this.result = res.data;
+  });
+};
+
+module.exports = GithubController;

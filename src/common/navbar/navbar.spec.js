@@ -1,43 +1,43 @@
-import NavbarModule from './navbar';
-import NavbarController from './navbar.controller';
-import NavbarComponent from './navbar.component';
-import NavbarTemplate from './navbar.html';
+var NavbarModule = require('./navbar');
+var NavbarController = require('./navbar.controller');
+var NavbarComponent = require('./navbar.component');
+var NavbarTemplate = require('./navbar.html');
 
-describe('Navbar', () => {
-  let makeController;
+describe('Navbar', function() {
+  var makeController;
 
   beforeEach(window.module(NavbarModule.name));  // eslint-disable-line
-  beforeEach(inject(() => {
-    makeController = () => {
+  beforeEach(inject(function() {
+    makeController = function() {
       return new NavbarController();
     };
   }));
 
-  describe('Module', () => {
+  describe('Module', function() {
     // top-level specs: i.e., routes, injection, naming
   });
 
-  describe('Controller', () => {
+  describe('Controller', function() {
     // controller specs
-    it('has a name property', () => { // erase if removing this.name from the controller
-      let controller = makeController();
+    it('has a name property', function() { // erase if removing this.name from the controller
+      var controller = makeController();
       expect(controller).to.have.property('name');
     });
   });
 
-  describe('Component', () => {
+  describe('Component', function() {
     // component/directive specs
-    let component = NavbarComponent();
+    var component = NavbarComponent();
 
-    it('includes the intended template',() => {
+    it('includes the intended template',function() {
       expect(component.template).to.equal(NavbarTemplate);
     });
 
-    it('uses `controllerAs` syntax', () => {
+    it('uses `controllerAs` syntax', function() {
       expect(component).to.have.property('controllerAs');
     });
 
-    it('invokes the right controller', () => {
+    it('invokes the right controller', function() {
       expect(component.controller).to.equal(NavbarController);
     });
   });

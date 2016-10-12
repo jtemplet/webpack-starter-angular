@@ -1,12 +1,12 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import newComponent from './new.component';
+var angular = require('angular');
+var uiRouter = require('angular-ui-router');
+var newComponent = require('./new.component');
 
-let newModule = angular.module('new', [
+var newModule = angular.module('new', [
   uiRouter
 ])
 
-.config(($stateProvider) => {
+.config(function($stateProvider) {
   $stateProvider
     .state('new', {
       url: '/new',
@@ -16,4 +16,4 @@ let newModule = angular.module('new', [
 
 .component('new', newComponent);
 
-export default newModule;
+module.exports = newModule;

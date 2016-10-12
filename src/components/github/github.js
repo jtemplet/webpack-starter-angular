@@ -1,13 +1,13 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import githubComponent from './github.component';
-import githubService from './github.service';
+var angular = require('angular');
+var uiRouter = require('angular-ui-router');
+var githubComponent = require('./github.component');
+var githubService = require('./github.service');
 
-let githubModule = angular.module('github', [
+var githubModule = angular.module('github', [
   uiRouter
 ])
 
-.config(($stateProvider) => {
+.config(function($stateProvider) {
   $stateProvider
     .state('github', {
       url: '/github',
@@ -18,4 +18,4 @@ let githubModule = angular.module('github', [
 .component('github', githubComponent)
 .service('githubService', githubService);
 
-export default githubModule;
+module.exports = githubModule;

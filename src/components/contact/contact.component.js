@@ -1,15 +1,15 @@
-import template from './contact.html';
-import controller from './contact.controller';
+var template = require('./contact.html');
+var controller = require('./contact.controller');
 
-let contactComponent = function () {
+var contactComponent = function () {
   return {
     restrict: 'E',
     scope: {},
-    template,
-    controller,
+    template: template,
+    controller: controller,
     controllerAs: 'vm',
     bindToController: true
   };
 };
 
-export default contactComponent;
+module.exports = contactComponent;

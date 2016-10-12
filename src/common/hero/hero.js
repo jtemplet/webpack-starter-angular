@@ -1,11 +1,11 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import heroComponent from './hero.component';
+var angular = require('angular');
+var uiRouter = require('angular-ui-router');
+var heroComponent = require('./hero.component');
 
-let heroModule = angular.module('hero', [
+var heroModule = angular.module('hero', [
   uiRouter
 ])
 
 .directive('hero', heroComponent);
 
-export default heroModule;
+module.exports = heroModule;

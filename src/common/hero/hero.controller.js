@@ -1,7 +1,5 @@
-class HeroController {
-  constructor() {
+function HeroController() {
     this.name = 'hero';
-  }
 }
 
-export default HeroController;
+module.exports = HeroController;

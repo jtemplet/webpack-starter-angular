@@ -1,12 +1,12 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import contactAddressComponent from './contact.address.component';
+var angular = require('angular');
+var uiRouter = require('angular-ui-router');
+var contactAddressComponent = require('./contact.address.component');
 
-let contactAddressModule = angular.module('contactAddress', [
+var contactAddressModule = angular.module('contactAddress', [
   uiRouter
 ])
 
-.config(($stateProvider) => {
+.config(function($stateProvider) {
   $stateProvider
     .state('contact.address', {
       url: '/address',
@@ -16,4 +16,4 @@ let contactAddressModule = angular.module('contactAddress', [
 
 .component('address', contactAddressComponent);
 
-export default contactAddressModule;
+module.exports = contactAddressModule;

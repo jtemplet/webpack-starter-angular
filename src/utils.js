@@ -1,8 +1,8 @@
-import _ from 'lodash';
+const _ = require('lodash');
 
 // add field to existing json schema
-let addField = function(schema, field) {
+var addField = function(schema, field) {
   return _.merge(schema, {'properties': field});
 };
 
-export default addField;
+module.exports = addField;

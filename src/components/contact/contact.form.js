@@ -1,7 +1,7 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import contactFormComponent from './contact.form.component';
-import 'angular-sanitize';
+var angular = require('angular');
+var uiRouter = require('angular-ui-router');
+var contactFormComponent = require('./contact.form.component');
+require('angular-sanitize');
 require('script!tv4/tv4.js');
 require('script!objectpath/lib/ObjectPath');
 require('script!angular-schema-form/dist/schema-form');
@@ -10,12 +10,12 @@ require('script!angular-schema-form/dist/bootstrap-decorator');
 // import schemaForm from 'angular-schema-form/dist/schema-form';
 // import 'angular-schema-form/dist/bootstrap-decorator';
 
-let contactFormModule = angular.module('contactForm', [
+var contactFormModule = angular.module('contactForm', [
   uiRouter,
   'schemaForm'
 ])
 
-.config(($stateProvider) => {
+.config(function($stateProvider) {
   $stateProvider
     .state('contact.form', {
       url: '/form',
@@ -25,4 +25,4 @@ let contactFormModule = angular.module('contactForm', [
 
 .component('contactform', contactFormComponent);
 
-export default contactFormModule;
+module.exports =  contactFormModule;

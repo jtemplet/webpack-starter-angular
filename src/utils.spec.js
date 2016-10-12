@@ -1,19 +1,19 @@
-import addField from './utils';
+var addField = require('./utils');
 
 // do not truncate diffs
 chai.config.truncateThreshold = 0;
 
 
-describe('Test addField', () => {
+describe('Test addField', function() {
 
-  it('add empty field', () => {
-    let schema = {
+  it('add empty field', function() {
+    var schema = {
       'properties': {
         'one': {'one': 'foo'}
       }
     };
     addField(schema, {});
-    let expected = {
+    var expected = {
       'properties': {
         'one': {'one': 'foo'}
       }
@@ -23,14 +23,14 @@ describe('Test addField', () => {
     expect(expected).to.deep.equal(schema);
   });
 
-  it('add simple field', () => {
-    let schema = {
+  it('add simple field', function() {
+    var schema = {
       'properties': {
         'one': {'one': 'foo'}
       }
     };
     addField(schema, {'two': {'two': 'bar'}});
-    let expected = {
+    var expected = {
       'properties': {
         'one': {'one': 'foo'},
         'two': {'two': 'bar'}

@@ -1,7 +1,7 @@
-import template from './new.html';
-import controller from './new.controller';
+var template = require('./new.html');
+var controller = require('./new.controller');
 
-let newComponent = {
+var newComponent = {
   restrict: 'E',
   scope: {},
   template: template,
@@ -9,4 +9,4 @@ let newComponent = {
   controllerAs: 'vm'
 };
 
-export default newComponent;
+module.exports = newComponent;

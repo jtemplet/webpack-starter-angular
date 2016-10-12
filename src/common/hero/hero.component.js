@@ -1,15 +1,15 @@
-import template from './hero.jade';
-import controller from './hero.controller';
+var template = require('./hero.jade');
+var controller = require('./hero.controller');
 
-let heroComponent = function () {
+var heroComponent = function () {
   return {
     restrict: 'E',
     scope: {},
-    template,
-    controller,
+    template: template,
+    controller: controller,
     controllerAs: 'vm',
     bindToController: true
   };
 };
 
-export default heroComponent;
+module.exports = heroComponent;

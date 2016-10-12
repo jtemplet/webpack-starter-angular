@@ -1,18 +1,18 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import formsComponent from './forms.component';
+var angular = require('angular');
+var uiRouter = require('angular-ui-router');
+var formsComponent = require('./forms.component');
 // order important: tv4 -> objectpath -> shemaForm -> shemaForm-bootstrap
-import 'tv4';
-import 'objectpath';
-import schemaForm from 'angular-schema-form';
-import 'script!angular-schema-form-bootstrap';
+require('tv4');
+require('objectpath');
+var schemaForm = require('angular-schema-form');
+require('script!angular-schema-form-bootstrap');
 
-let formsModule = angular.module('forms', [
+var formsModule = angular.module('forms', [
   schemaForm.name,
   uiRouter
 ])
 
-.config(($stateProvider) => {
+.config(function($stateProvider) {
   $stateProvider
     .state('forms', {
       url: '/forms',
@@ -22,4 +22,4 @@ let formsModule = angular.module('forms', [
 
 .component('forms', formsComponent);
 
-export default formsModule;
+module.exports = formsModule;

@@ -1,13 +1,13 @@
-import template from './home.html';
-import controller from './home.controller';
+var template = require('./home.html');
+var controller = require('./home.controller');
 
-let homeComponent = {
+var homeComponent = {
   restrict: 'E',
   scope: {},
-  template,
-  controller,
+  template: template,
+  controller: controller,
   controllerAs: 'vm',
   bindToController: true
 };
 
-export default homeComponent;
+module.exports = homeComponent;

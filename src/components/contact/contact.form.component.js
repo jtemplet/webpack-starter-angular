@@ -1,13 +1,13 @@
-import template from './contact.form.jade';
-import controller from './contact.form.controller';
+var template = require('./contact.form.jade');
+var controller = require('./contact.form.controller');
 
-let contactFormComponent = {
+var contactFormComponent = {
   restrict: 'E',
   scope: {},
-  template,
-  controller,
+  template: template,
+  controller: controller,
   controllerAs: 'vm',
   bindToController: true
 };
 
-export default contactFormComponent;
+module.exports = contactFormComponent;

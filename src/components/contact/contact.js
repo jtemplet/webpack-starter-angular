@@ -1,12 +1,12 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import contactComponent from './contact.component';
+var angular = require('angular');
+var uiRouter = require('angular-ui-router');
+var contactComponent = require('./contact.component');
 
-let contactModule = angular.module('contact', [
+var contactModule = angular.module('contact', [
   uiRouter
 ])
 
-.config(($stateProvider) => {
+.config(function($stateProvider) {
   $stateProvider
     .state('contact', {
       url: '/contact',
@@ -16,4 +16,4 @@ let contactModule = angular.module('contact', [
 
 .component('contact', contactComponent);
 
-export default contactModule;
+module.exports = contactModule;
