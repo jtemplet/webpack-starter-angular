@@ -137,11 +137,11 @@ Source: https://webpack.github.io/docs/shimming-modules.html
 
 ES 5 Implementation
 -------------------
-Switch to tag `es5_implementation`
+Switch to branch `es5_implementation`
 
 Code Splitting Vendor files into their own bundle
 -------------------------------------------------
-Switch to tag `code_split_vendor_files`
+Switch to branch `code_split_vendor_files`
 
 SASS Loader
 -----------
