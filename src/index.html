@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Angular Webpack Example</title>
-  <script src="{%= o.htmlWebpackPlugin.files.js %}"></script>
 </head>
 <body>
   <div class="container-fluid">
@@ -14,5 +13,7 @@
       </app>
     </div>
   </div>
+  <script src="vendor.bundle.js"></script>
+  <script src="app.bundle.js"></script>
 </body>
 </html>
