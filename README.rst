@@ -20,7 +20,6 @@ Stack
   - Mocha (Test Framework, http://mochajs.org/)
   - Chai (BDD/TSS assertion library, http://chaijs.com/)
 
-
 Requirements
 ------------
 
@@ -136,6 +135,13 @@ Imports for broken modules::
 
 Source: https://webpack.github.io/docs/shimming-modules.html
 
+ES 5 Implementation
+-------------------
+Switch to tag `es5_implementation`
+
+Code Splitting Vendor files into their own bundle
+-------------------------------------------------
+Switch to tag `code_split_vendor_files`
 
 SASS Loader
 -----------
